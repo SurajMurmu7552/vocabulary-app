@@ -1,4 +1,4 @@
-import React from "react";
+//hooks
 import { useHistory } from "react-router";
 import { Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -10,7 +10,10 @@ import { Close } from "@mui/icons-material";
 //import css
 import "./FullView.css";
 
+//schema
 import { GET_SINGLE_DATA } from "../../schema/query";
+
+//reducer
 import { removeView } from "../../redux/viewSlice.js";
 
 export default function FullView() {
@@ -18,8 +21,10 @@ export default function FullView() {
 
   const dispatch = useDispatch();
 
+  //Redux, fullpage view
   const viewText = useSelector((state) => state.viewText);
 
+  //Query
   const { loading, error, data } = useQuery(GET_SINGLE_DATA, {
     variables: {
       getSingleDataId: viewText.viewText,
@@ -27,7 +32,9 @@ export default function FullView() {
   });
 
   const handleClick = () => {
+    //reset fullpage view
     dispatch(removeView());
+
     history.push("/");
   };
 

@@ -1,4 +1,6 @@
 import React from "react";
+
+//import components
 import Nav from "../nav/Nav";
 import View from "../view/View";
 

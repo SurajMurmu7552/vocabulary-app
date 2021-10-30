@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
-//import component
+//hooks
+import { useState } from "react";
 import { useQuery } from "@apollo/client";
 import { useSelector } from "react-redux";
-import { GET_ALL_DATA } from "../../schema/query";
+
+//import component
 import Card from "../card/Card";
+import AddData from "../addData/AddData";
+
+//schema
+import { GET_ALL_DATA } from "../../schema/query";
 
 //import icons
 import { Close } from "@mui/icons-material";
@@ -11,14 +16,16 @@ import { Close } from "@mui/icons-material";
 //import css
 import "./View.css";
 
-import AddData from "../addData/AddData";
-
 export default function View() {
   const [toggle, setToggle] = useState(false);
+
+  //Query
   const { loading, error, data, refetch } = useQuery(GET_ALL_DATA);
 
+  //Redux
   const { searchText } = useSelector((state) => state.searchText);
 
+  //regex
   const re = searchText.length > 0 ? `(${searchText})` : "()";
   const condition = new RegExp(re, "g");
 

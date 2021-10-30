@@ -12,17 +12,23 @@ import "./App.css";
 import Dashboard from "./components/dashboard/Dashboard";
 import FullView from "./components/fullView/FullView";
 import Notification from "./components/notification/Notification";
+
+//import hooks
 import { useDispatch, useSelector } from "react-redux";
+
+//import reducer
 import { removePopupText } from "./redux/popupSlice";
 
 function App() {
   const dispatch = useDispatch();
 
+  //for desktop view
   const [width, setWidth] = useState(0);
   const app = useRef(null);
 
   const { popupText } = useSelector((state) => state.popupText);
 
+  //2s timer for popup notification
   if (popupText.length > 0) {
     setTimeout(() => dispatch(removePopupText()), 2000);
   }

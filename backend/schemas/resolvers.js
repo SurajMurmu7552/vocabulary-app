@@ -1,6 +1,6 @@
 const DataModel = require("../models/dataModel");
 
-// mod.cjs
+// mod.cjs , fetch for api call
 const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 

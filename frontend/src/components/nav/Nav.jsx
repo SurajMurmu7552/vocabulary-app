@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+//hooks
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 
+//reducer
 import { removeSearch, setSearch } from "../../redux/searchSlice.js";
 
 //import icons
@@ -14,6 +16,7 @@ export default function Nav() {
 
   const dispatch = useDispatch();
 
+  //set search ,Redux
   const handleChange = (e) => {
     console.log(e.target.value);
     if (e.target.value.length > 0) {

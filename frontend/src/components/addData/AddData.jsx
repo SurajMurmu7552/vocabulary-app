@@ -1,7 +1,12 @@
+//hooks
+import { useState } from "react";
 import { useMutation } from "@apollo/client";
-import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+
+//reudcer
 import { setPopupText } from "../../redux/popupSlice";
+
+//schema
 import { ADD_DATA } from "../../schema/mutation";
 
 //import css
@@ -11,11 +16,13 @@ export default function AddData({ handleToggle }) {
   const dispatch = useDispatch();
   const [word, setWord] = useState("");
 
+  //Mutation
   const [addData, { data, loading, error }] = useMutation(ADD_DATA);
 
   const handleAddWord = (e) => {
     e.preventDefault();
     if (word !== "") {
+      //use mutation
       addData({
         variables: {
           addDataId: word,

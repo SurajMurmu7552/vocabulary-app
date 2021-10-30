@@ -12,7 +12,9 @@ export default function Card({ ele }) {
   const dispatch = useDispatch();
 
   const handleClick = () => {
+    //Redux , set fullpage view
     dispatch(setView(ele.results[0].word));
+
     history.push("/view");
   };
 

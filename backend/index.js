@@ -7,19 +7,23 @@ dotenv.config();
 // import mongodb connection
 const connection = require("./config/db");
 
+//import schemas
 const typeDefs = require("./schemas/typeDefs");
 const resolvers = require("./schemas/resolvers");
 
 const app = express();
 
+//middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
+//database connection
 connection();
 
 (async () => {
+  //apollo server
   const server = new ApolloServer({
     typeDefs,
     resolvers,
