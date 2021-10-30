@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const uri = process.env.MONGO_URI;
+const uri =
+  "mongodb+srv://user1:user1@cluster0.njgll.mongodb.net/vocabularyApp?retryWrites=true&w=majority";
 
 const connection = async () => {
   try {
