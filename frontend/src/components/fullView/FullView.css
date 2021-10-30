@@ -1,0 +1,59 @@
+.full-view {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.full-view-nav {
+  height: 15vh;
+  width: 90%;
+}
+
+.full-view-icon > svg {
+  margin-top: 20px;
+  position: relative;
+  margin-left: 92%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.full-view-heading {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+}
+
+.results {
+  padding: 0 20px;
+  width: 100%;
+  height: 85vh;
+  overflow-y: scroll;
+  font-size: 0.9rem;
+}
+.results::-webkit-scrollbar {
+  width: 1px;
+}
+.lexicalEntry {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.lexicalEntry-heading {
+  padding: 5px 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+.etymologies-text {
+  padding: 5px 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+.definitions {
+  padding-bottom: 5px;
+}
+.examples {
+  margin: 0 auto;
+  width: 80%;
+  padding-bottom: 5px;
+}
+
+.example {
+  padding-bottom: 5px;
+}

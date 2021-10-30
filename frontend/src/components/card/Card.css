@@ -1,0 +1,15 @@
+.card {
+  padding: 5px 10px;
+  min-height: 100px;
+  width: 100%;
+}
+.card-heading {
+  padding-bottom: 10px;
+}
+.card-content {
+  padding-bottom: 10px;
+}
+.card-content > p {
+  font-size: 15px;
+  padding-bottom: 5px;
+}
