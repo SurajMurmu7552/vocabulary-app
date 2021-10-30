@@ -22,7 +22,6 @@ export default function AddData({ handleToggle }) {
         },
       });
     }
-    // }
   };
 
   const handleCancel = (e) => {

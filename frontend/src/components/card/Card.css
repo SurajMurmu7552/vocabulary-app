@@ -3,13 +3,17 @@
   min-height: 100px;
   width: 100%;
 }
+
 .card-heading {
   padding-bottom: 10px;
+  pointer-events: none;
 }
 .card-content {
   padding-bottom: 10px;
+  pointer-events: none;
 }
 .card-content > p {
+  pointer-events: none;
   font-size: 15px;
   padding-bottom: 5px;
 }
