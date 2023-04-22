@@ -1,5 +1,4 @@
 # vocabulary-app
-deployed on heroku - https://vocabulary-app-react.herokuapp.com/
 
 Frontend made with reactjs,@reduxjs/toolkit and Apollo Client.
 
